@@ -3,53 +3,50 @@ import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Card.astro";
 ---
 
-<Layout title="Projects - Muhammad Wasif">
+<Layout title="Projects - Ali Mansoor">
   <main>
-    <h2>I've built hundreds of sites and apps. Here are a few of them.</h2>
+    <h2>Here are a few projects I've worked on.</h2>
     <p>
-      Within my career, I have worked on variety of Web3 and blockchain relevant
-      projects. I have always tried to implement the best and optimal solution
-      to the every problem I encounter. With a huge experience in building front
-      end applications with <b>React & Next.js</b>, I have worked with
-      technologies like <b>NestJS</b> & <b>GraphQL</b> to develop back-end RESTful
-      APIs.
+      I specialize in building cross-platform mobile applications using <b>Flutter</b>, along with real-time features powered by <b>Firebase</b> and robust backends using <b>Flask</b> or <b>Flask</b>. I focus on delivering clean architecture, intuitive user experiences, and scalable solutions.
     </p>
     <p>
-      Besides tradional web development, I have also explored <i>Metaverse</i> world
-      while developing applications on <b>Decentraland</b> (MANA). with DCL SDK and
-      JavaScript physics engines. <br />
-      Here are few of the projects, I have worked on
+      Whether it's fintech, education, e-commerce, or weather apps — I approach every project with an emphasis on usability, performance, and maintainability.
+      <br />
+      Below are some of the applications I’ve built or contributed to:
     </p>
 
     <Experience
-      title="IU Meta Stadium"
-      description="IU Meta is a 3D stadium in Decentraland, owned by Islamabad United (a PSL cricket team). With LaLiga Land in its neighbors, IU Meta is an interactive stadium where you can complete different challenges to get rewards (NFTs, wearables & assets). I got an opportunity to work on Decentraland SDK (in TypeScript) to develop and deploy the stadium in Decentraland."
-      subtitle="World's first cricket metaverse stadium"
+      title="Paymo - Your Digital Payment Solution"
+      description="Paymo is a robust and user-friendly digital payment app developed in Flutter. It enables real-time payment tracking, QR code scanning, and secure transactions across Android and iOS platforms. I worked on core features, implemented responsive UI, and ensured performance consistency across devices."
+      subtitle="Fintech | Flutter + Firebase + Node.js"
       links={[
-        { text: "Website", href: "https://metastadium.io/stadium" },
-        {
-          text: "Visit stadium",
-          href: "https://play.decentraland.org/?NETWORK=mainnet&position=-146%2C76&realm=dg&island=dg2wxn",
-        },
+        { text: "Website", href: "https://paymo.com.pk/" },
       ]}
-      image="/images/u-meta.png"
+      image="/images/paymo.jpeg"
     />
-    <Experience
-  title="Grocery Delivery App UI"
-  description="A modern and intuitive UI/UX design for a grocery delivery mobile app. Designed using Figma with a focus on user flow, accessibility, and clean visual hierarchy."
-  subtitle="Mobile UI Design in Figma"
-  links={[
-    { text: "View on Figma", href: "https://www.figma.com/proto/WrW222ENpaQiAcTWB74HsS/Faisal-ALi-Khan-UI-UX?node-id=6-27441&starting-point-node-id=6%3A27441&t=xqTBTEUoihUiJ5NB-1" }
-  ]}
-     image="/images/u-meta.png"
-/>
 
     <Experience
-      title="Atlas DEX"
-      description="During my work at Ideofuzion, I got oppurtunity to work on Atlas DEX. Atlas DEX is first ever cross-chain aggregator from Solana to EVM chains. You can swap tokens & stake/unstake on multiple chains. \n My responsibilites inluded developing the responsive design of application and integrating APIs and contracts on front-end side."
-      subtitle="Cross-chain DEX aggregator"
-      links={[{ text: "Visit app", href: "https://app.atlasdex.finance/swap" }]}
-      image="/images/atlas.png"
+      title="Spark AI - Educational Platform"
+      description="Spark AI is a feature-rich educational mobile application for teachers and students. It allows course creation, lecture scheduling, assignment submissions, and class interaction. I built and optimized the frontend using Flutter and Firebase, ensuring scalability and ease of use for both roles."
+      subtitle="EdTech | Flutter + Firebase"
+      links={[]}
+      image="/images/sparkai.png"
+    />
+
+    <Experience
+      title="Ecom - Shopping App"
+      description="A clean and functional eCommerce Flutter application integrated with Firebase backend. Features include real-time product updates, secure Firebase Authentication, and shopping cart management. It was designed to simulate a real online shopping experience with seamless transitions and UI."
+      subtitle="E-Commerce | Flutter + Firebase Auth"
+      links={[]}
+      image="/images/ecom.jpg"
+    />
+
+    <Experience
+      title="Clima - Personal Weather Companion"
+      description="Clima is a lightweight, real-time weather app built with Flutter and OpenWeatherMap API. It provides accurate weather information based on user location with a minimalist and responsive interface. Great for understanding API handling and state management in Flutter."
+      subtitle="Weather App | Flutter + REST API"
+      links={[]}
+      image="/images/clima.png"
     />
   </main>
 </Layout>

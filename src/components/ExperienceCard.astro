@@ -23,17 +23,16 @@ const { title, subtitle, description, links, image } = Astro.props;
       {description}
     </p>
   </div>
-  <div class="footer">
-    {
-      links.map((link) => {
-        return (
-          <a href={link.href} target="_blank">
-            {link.text}
-          </a>
-        );
-      })
-    }
-  </div>
+ <div class="footer">
+  {
+    links?.length > 0 && links.map((link) => (
+      <a href={link.href} target="_blank">
+        {link.text}
+      </a>
+    ))
+  }
+</div>
+
 </div>
 
 </div>
