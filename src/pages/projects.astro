@@ -1,59 +1,314 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Experience from "../components/Card.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="Projects - Ali Mansoor">
   <main>
-    <h2>Here are a few projects I've worked on.</h2>
-    <p>
-      I specialize in building cross-platform mobile applications using <b>Flutter</b>, along with real-time features powered by <b>Firebase</b> and robust backends using <b>Flask</b> or <b>Flask</b>. I focus on delivering clean architecture, intuitive user experiences, and scalable solutions.
-    </p>
-    <p>
-      Whether it's fintech, education, e-commerce, or weather apps — I approach every project with an emphasis on usability, performance, and maintainability.
-      <br />
-      Below are some of the applications I’ve built or contributed to:
-    </p>
+    <div class="hero-section">
+      <h1>My Projects</h1>
+      <p class="hero-description">
+        A collection of projects showcasing my expertise in <span class="highlight">mobile development</span>, 
+        <span class="highlight">web applications</span>, and <span class="highlight">UI/UX design</span>. 
+        Each project represents a unique challenge solved with modern technologies and best practices.
+      </p>
+    </div>
 
-    <Experience
-      title="Paymo - Your Digital Payment Solution"
-      description="Paymo is a robust and user-friendly digital payment app developed in Flutter. It enables real-time payment tracking, QR code scanning, and secure transactions across Android and iOS platforms. I worked on core features, implemented responsive UI, and ensured performance consistency across devices."
-      subtitle="Fintech | Flutter + Firebase + Node.js"
-      links={[
-        { text: "Website", href: "https://paymo.com.pk/" },
-      ]}
-      image="/images/paymo.jpeg"
-    />
+    <!-- Mobile Applications Section -->
+    <section class="project-section">
+      <div class="section-header">
+        <div class="section-icon">📱</div>
+        <div>
+          <h2>Mobile Applications</h2>
+          <p>Cross-platform apps with real-time features and polished UX.</p>
+        </div>
+      </div>
+      
+      <div class="projects-grid">
+        <ProjectCard
+          title="Paymo - Digital Payment Solution"
+          description="A comprehensive fintech application enabling secure digital payments, QR code transactions, and real-time payment tracking. Built with Flutter for cross-platform compatibility and Firebase for backend services."
+          technologies={["Flutter", "Firebase", "Node.js", "QR Scanner"]}
+          category="Fintech"
+          links={[
+            { text: "Visit Website", href: "https://paymo.com.pk/", type: "website" },
+          ]}
+          image="/images/paymo.jpeg"
+          featured={true}
+        />
 
-    <Experience
-      title="Spark AI - Educational Platform"
-      description="Spark AI is a feature-rich educational mobile application for teachers and students. It allows course creation, lecture scheduling, assignment submissions, and class interaction. I built and optimized the frontend using Flutter and Firebase, ensuring scalability and ease of use for both roles."
-      subtitle="EdTech | Flutter + Firebase"
-      links={[]}
-      image="/images/sparkai.png"
-    />
+        <ProjectCard
+          title="Spark AI - Educational Platform"
+          description="An innovative EdTech platform connecting teachers and students through course management, assignment tracking, and interactive learning tools. Features real-time communication and progress monitoring."
+          technologies={["Flutter", "Firebase", "Real-time DB"]}
+          category="EdTech"
+          links={[]}
+        />
 
-    <Experience
-      title="Ecom - Shopping App"
-      description="A clean and functional eCommerce Flutter application integrated with Firebase backend. Features include real-time product updates, secure Firebase Authentication, and shopping cart management. It was designed to simulate a real online shopping experience with seamless transitions and UI."
-      subtitle="E-Commerce | Flutter + Firebase Auth"
-      links={[]}
-      image="/images/ecom.jpg"
-    />
+        <ProjectCard
+          title="Ecom - Shopping Experience"
+          description="A modern e-commerce application with seamless shopping cart management, secure authentication, and real-time product updates. Designed for optimal user experience across all devices."
+          technologies={["Flutter", "Firebase Auth", "State Management"]}
+          category="E-Commerce"
+          links={[]}
+          image="/images/ecom.jpg"
+        />
 
-    <Experience
-      title="Clima - Personal Weather Companion"
-      description="Clima is a lightweight, real-time weather app built with Flutter and OpenWeatherMap API. It provides accurate weather information based on user location with a minimalist and responsive interface. Great for understanding API handling and state management in Flutter."
-      subtitle="Weather App | Flutter + REST API"
-      links={[]}
-      image="/images/clima.png"
-    />
+        <ProjectCard
+          title="Clima - Weather Companion"
+          description="A minimalist weather application providing accurate forecasts and location-based weather data. Perfect example of clean architecture and API integration in Flutter development."
+          technologies={["Flutter", "OpenWeather API", "Geolocation"]}
+          category="Utility"
+          links={[]}
+          image="/images/clima.png"
+        />
+      </div>
+    </section>
+
+    <!-- Web Applications Section -->
+    <section class="project-section">
+      <div class="section-header">
+        <div class="section-icon">🌐</div>
+        <div>
+          <h2>Web Applications</h2>
+          <p>Modern web solutions built with cutting-edge frameworks and responsive design principles.</p>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="coming-soon-card">
+          <div class="coming-soon-content">
+            <h3>Web Projects Coming Soon</h3>
+            <p>Currently working on exciting web applications that will be showcased here.</p>
+            <div class="progress-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UI/UX Designs Section -->
+    <section class="project-section">
+      <div class="section-header">
+        <div class="section-icon">🎨</div>
+        <div>
+          <h2>UI/UX Designs</h2>
+          <p>Creative design solutions focusing on user experience and modern interface design principles.</p>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="coming-soon-card">
+          <div class="coming-soon-content">
+            <h3>Design Portfolio Coming Soon</h3>
+            <p>Curating a collection of UI/UX designs and prototypes to showcase here.</p>
+            <div class="progress-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  p,
-  h2 {
+  :root {
+    --primary: #6366f1;
+    --primary-rgb: 99, 102, 241;
+    --color: #e2e8f0;
+    --text-light: #94a3b8;
+    --card-bg: rgba(15, 23, 42, 0.6);
+    --border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--color), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .highlight {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .project-section {
+    margin-bottom: 4rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .section-icon {
+    font-size: 2rem;
+    margin-top: 0.2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
     color: var(--color);
+    margin: 0 0 0.25rem 0;
+  }
+
+  .section-header p {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .coming-soon-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / -1;
+    height: 200px;
+    border: 2px dashed var(--text-light);
+    border-radius: 1rem;
+    background: rgba(15, 23, 42, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .coming-soon-card:hover {
+    border-color: var(--primary);
+    background: rgba(var(--primary-rgb), 0.1);
+  }
+
+  .coming-soon-content {
+    text-align: center;
+    padding: 1.5rem;
+    max-width: 500px;
+  }
+
+  .coming-soon-content h3 {
+    color: var(--color);
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .coming-soon-content p {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .progress-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .progress-dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0.4;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  .progress-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .progress-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+  }
+
+  @media (max-width: 768px) {
+    main {
+      padding: 1rem;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+    }
+
+    .section-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .section-icon {
+      font-size: 1.5rem;
+    }
+
+    .coming-soon-card {
+      height: 180px;
+    }
+
+    .coming-soon-content h3 {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
