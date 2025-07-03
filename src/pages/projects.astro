@@ -83,31 +83,45 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
       </div>
 
-    <div class="projects-grid">
-        <ProjectCard
-          title="Faisal Ali Khan - Creative Portfolio"
-          description="A sophisticated portfolio website showcasing the work of Faisal Ali Khan, CEO of The Essential Studio. Features comprehensive galleries for VFX, animation, branding, and multimedia production services with modern responsive design."
-          technologies={["HTML", "CSS", "JSS","Responsive Design", "Modern UI"]}
-          category="Portfolio"
-          links={[
-            { text: "Visit Website", href: "https://faisalalikhan.vercel.app/", type: "website" },
-          ]}
-          image="/images/faisal_ali_khan.png"
-          featured={true}
-        />
+   <!-- Other code remains unchanged above -->
+<div class="projects-grid">
+  <ProjectCard
+    title="Faisal Ali Khan - Creative Portfolio"
+    description="A sophisticated portfolio website showcasing the work of Faisal Ali Khan, CEO of The Essential Studio. Features comprehensive galleries for VFX, animation, branding, and multimedia production services with modern responsive design."
+    technologies={["HTML", "CSS", "JSS","Responsive Design", "Modern UI"]}
+    category="Portfolio"
+    links={[
+      { text: "Visit Website", href: "https://faisalalikhan.vercel.app/", type: "website" },
+    ]}
+    image="/images/faisal_ali_khan.png"
+    featured={true}
+  />
 
-        <div class="coming-soon-card">
-          <div class="coming-soon-content">
-            <h3>More Web Projects Coming Soon</h3>
-            <p>Currently working on exciting web applications that will be showcased here.</p>
-            <div class="progress-dots">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
+  <!-- ✅ New Web Project: Paymo Events -->
+  <ProjectCard
+    title="Paymo Events - Ticket Booking Platform"
+    description="A streamlined web-based event ticketing solution built with Next.js and Tailwind CSS. Enables users to browse, book, and manage event tickets with a smooth, responsive experience across all devices."
+    technologies={["Next.js", "Tailwind CSS", "HTML", "JSS", "Responsive Design"]}
+    category="Events / Ticketing"
+    links={[
+      { text: "Visit Website", href: "https://events.paymo.com.pk/", type: "website" },
+    ]}
+    image="/images/event_paymo.png"
+  />
+
+  <div class="coming-soon-card">
+    <div class="coming-soon-content">
+      <h3>More Projects Coming Soon</h3>
+      <p>Currently working on exciting Mobile and web applications that will be showcased here.</p>
+      <div class="progress-dots">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
+    </div>
+  </div>
+</div>
+
     </section>
   </main>
 </Layout>
