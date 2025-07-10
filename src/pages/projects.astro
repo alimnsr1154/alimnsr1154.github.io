@@ -16,7 +16,6 @@ import ProjectCard from "../components/ProjectCard.astro";
         Each one was built with a focus on clean code, modern frameworks, and real-world impact.
       </p>
     </div>
-
     <!-- Mobile Applications Section -->
     <section class="project-section">
       <div class="section-header">
@@ -26,7 +25,6 @@ import ProjectCard from "../components/ProjectCard.astro";
           <p>Cross-platform apps with real-time features and polished UX.</p>
         </div>
       </div>
-      
       <div class="projects-grid">
         <ProjectCard
           title="Paymo - Digital Payment Solution"
@@ -36,8 +34,19 @@ import ProjectCard from "../components/ProjectCard.astro";
           links={[
             { text: "Visit Website", href: "https://paymo.com.pk/", type: "website" },
           ]}
-          image="/images/paymo.jpeg"
+          image="/images/paymo.png"
           featured={true}
+        />
+
+         <ProjectCard
+          title="Paymo - Digital Payment Solution"
+          description="A comprehensive fintech application enabling secure digital payments, QR code transactions, and real-time payment tracking. Built with Flutter for cross-platform compatibility and Firebase for backend services."
+          technologies={["Flutter", "Firebase", "Flask.", "FlutterBloc"]}
+          category="Fintech"
+          links={[
+            { text: "Visit Website", href: "https://paymo.com.pk/", type: "website" },
+          ]}
+          image="/images/paymo_biz.png"
         />
 
         <ProjectCard
@@ -108,6 +117,17 @@ import ProjectCard from "../components/ProjectCard.astro";
     ]}
     image="/images/event_paymo.png"
   />
+    <ProjectCard
+    title="Unicorn International - Tools & Knives Store"
+    description="A robust eCommerce platform for Unicorn International, offering a wide range of tools, knives, and jewellery products. Features include detailed product categories such as Damascus Knives, D2 Steel Knives, Rail Rod Spike Knives, Medieval Swords, Jewellery Tools & Wires, and Optical Tools. Built for performance and ease of use."
+    technologies={["React.js", "Tailwind CSS", "Node.js", "Responsive UI"]}
+    category="E-Commerce / Tools & Knives"
+    links={[
+      { text: "GitHub Repository", href: "https://github.com/alimnsr1154/unicorn_International", type: "github" },
+    ]}
+    image="/images/unicorn_international.png"
+  />
+
 
   <div class="coming-soon-card">
     <div class="coming-soon-content">
