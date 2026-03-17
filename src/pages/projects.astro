@@ -26,7 +26,7 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
       </div>
       <div class="projects-grid">
-        <ProjectCard
+        <ProjectCard class="animate-on-scroll"
           title="Paymo - Digital Payment Solution"
           description="A comprehensive fintech application enabling secure digital payments, QR code transactions, and real-time payment tracking. Built with Flutter for cross-platform compatibility and Firebase for backend services."
           technologies={["Flutter", "Firebase", "Flask.", "FlutterBloc"]}
@@ -39,7 +39,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           image="/images/paymo.png"
           featured={true}
         />
-        <ProjectCard
+        <ProjectCard class="animate-on-scroll"
           title="Paymo Biz - Merchant Payment App"
           description="A dedicated fintech solution for businesses, enabling merchants to manage digital payments, generate QR codes, and monitor transactions in real time. Built using Flutter for cross-platform deployment with Firebase and Flask integration for backend operations."
           technologies={["Flutter", "Firebase", "Flask", "FlutterBloc"]}
@@ -49,7 +49,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           ]}
           image="/images/paymo_biz.png"
         />
-        <ProjectCard
+        <ProjectCard class="animate-on-scroll"
           title="Spark AI - Educational Platform"
           description="An innovative EdTech platform connecting teachers and students through course management, assignment tracking, and interactive learning tools. Features real-time communication and progress monitoring."
           technologies={["Flutter", "Firebase", "Real-time DB"]}
@@ -57,7 +57,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           links={[]}
         />
 
-                <ProjectCard
+                <ProjectCard class="animate-on-scroll"
             title="Ecom - Shopping Experience"
             description="A modern e-commerce application with seamless shopping cart management, secure authentication, and real-time product updates. Designed for optimal user experience across all devices."
             technologies={["Flutter", "Firebase Auth", "State Management", "FlutterBloc"]}
@@ -69,7 +69,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           />
 
 
-        <ProjectCard
+        <ProjectCard class="animate-on-scroll"
           title="Clima - Weather Companion"
           description="A minimalist weather application providing accurate forecasts and location-based weather data. Perfect example of clean architecture and API integration in Flutter development."
           technologies={["Flutter", "OpenWeather API", "Geolocation"]}
@@ -94,7 +94,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 
    <!-- Other code remains unchanged above -->
 <div class="projects-grid">
-  <ProjectCard
+  <ProjectCard class="animate-on-scroll"
     title="Faisal Ali Khan - Creative Portfolio"
     description="A sophisticated portfolio website showcasing the work of Faisal Ali Khan, CEO of The Essential Studio. Features comprehensive galleries for VFX, animation, branding, and multimedia production services with modern responsive design."
     technologies={["HTML", "CSS", "JSS","Responsive Design", "Modern UI"]}
@@ -107,7 +107,7 @@ import ProjectCard from "../components/ProjectCard.astro";
   />
 
   <!-- ✅ New Web Project: Paymo Events -->
-  <ProjectCard
+  <ProjectCard class="animate-on-scroll"
     title="Paymo Events - Ticket Booking Platform"
     description="A streamlined web-based event ticketing solution built with Next.js and Tailwind CSS. Enables users to browse, book, and manage event tickets with a smooth, responsive experience across all devices."
     technologies={["Next.js", "Tailwind CSS", "HTML", "JSS", "Responsive Design"]}
@@ -117,7 +117,7 @@ import ProjectCard from "../components/ProjectCard.astro";
     ]}
     image="/images/event_paymo.png"
   />
-    <ProjectCard
+    <ProjectCard class="animate-on-scroll"
     title="Unicorn International - Tools & Knives Store"
     description="A robust eCommerce platform for Unicorn International, offering a wide range of tools, knives, and jewellery products. Features include detailed product categories such as Damascus Knives, D2 Steel Knives, Rail Rod Spike Knives, Medieval Swords, Jewellery Tools & Wires, and Optical Tools. Built for performance and ease of use."
     technologies={["React.js", "Tailwind CSS", "Node.js", "Responsive UI"]}
@@ -339,6 +339,25 @@ import ProjectCard from "../components/ProjectCard.astro";
   .animate-slide-up {
     animation: slideUp 1s ease-out 0.3s both;
   }
+
+  .projects-grid .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .projects-grid .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .projects-grid .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+  .projects-grid .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+  .projects-grid .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+  .projects-grid .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+  .projects-grid .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+  .projects-grid .animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+  .projects-grid .animate-on-scroll:nth-child(n+7) { transition-delay: 0.6s; }
 
   @keyframes fadeIn {
     from { opacity: 0; }

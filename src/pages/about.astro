@@ -6,19 +6,35 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <h2 class="animate-fade-in">About Me</h2>
     <p class="animate-slide-up">
-      I'm a Software Engineer with a passion for creating exceptional user experiences across mobile and web platforms. My journey began during my university years, where I discovered my love for <strong>Flutter</strong>—a powerful framework for cross-platform mobile development—and modern frontend frameworks like <strong>React</strong> and <strong>Next.js</strong>. Through rigorous self-study and hands-on professional experience, I have developed expertise in building scalable, production-grade applications with polished interfaces and optimal performance.
+      I'm a Software Engineer passionate about building exceptional user experiences across mobile and web platforms. My professional journey began during my final year at FAST-NUCES, where I transitioned from academic learning into real-world software development. My career has been characterized by continuous growth, diverse technical exposure, and an unwavering commitment to engineering excellence.
     </p>
+
     <p class="animate-slide-up-delay">
-      Over the past 3+ years, I have successfully delivered multiple enterprise-grade applications spanning diverse domains—from fintech (digital payment platforms) and EdTech (learning management systems) to e-commerce and utility applications. My professional experience includes collaborations with industry-leading organizations such as <strong>Paymo</strong>, <strong>The Essential Studio</strong>, and <strong>GRADE UP</strong>, where I progressed from Junior to Senior Developer roles, contributing to mission-critical features and architectural decisions across mobile and web platforms.
+      <strong className="company-highlight">Grade Up (Pvt.) Ltd — August 2023 to August 2024</strong><br/>
+      I began my professional career as a Junior Flutter Developer at Grade Up, a pivotal role that shaped my foundation in mobile development. During this period, I transitioned from purely academic knowledge to practical software engineering, working on real-world Flutter applications. This position exposed me to fundamental web technologies and the MERN stack, helping me understand the broader landscape of full-stack development. I focused on hands-on application development, implementing features while learning modern frameworks and development methodologies. This experience significantly enhanced my problem-solving capabilities, taught me the importance of clean code and scalability, and equipped me with practical skills to contribute meaningfully to professional development teams.
     </p>
+
     <p class="animate-slide-up-delay">
-      I am deeply committed to engineering high-quality, maintainable applications with exceptional user experiences. My core technical expertise spans <strong>Flutter</strong> for mobile development, <strong>React</strong> and <strong>Next.js</strong> for modern web development, <strong>RESTful APIs</strong>, <strong>state management</strong>, and <strong>scalable application architecture</strong>. I specialize in building responsive, performant frontend solutions that prioritize user experience, clean code principles, and modern development practices.
+      <strong className="company-highlight">Paymo — July 2024 to September 2025</strong><br/>
+      My transition to Paymo marked a significant evolution in my career. I progressed from intern to full-time Flutter Developer, contributing to one of Pakistan's leading fintech platforms serving millions of users. At Paymo, I was responsible for delivering mission-critical features including sophisticated QR code scanning systems for seamless payment transactions, real-time payment tracking providing users with instant transaction visibility, and secure money transfer infrastructure handling complex financial operations. I designed responsive UI components that improved app usability by 40%, architected scalable application structures that reduced payment processing time by 35%, and collaborated cross-functionally to ensure seamless integration across Android and iOS platforms. This experience deepened my expertise in financial application development, performance optimization, and working within agile, fast-paced environments handling high-stakes features.
     </p>
+
     <p class="animate-slide-up-delay">
-      Beyond my professional responsibilities, I actively engage with emerging technologies and development methodologies, continuously refining my technical skills through open-source contributions and personal projects. I am an advocate for clean code principles, thoughtful design, and collaborative development practices that foster innovation and knowledge sharing within engineering teams.
+      <strong className="company-highlight">The Essential Studio — June 2024 to May 2025 (Concurrent)</strong><br/>
+      While progressing at Paymo, I took on the role of Development Consultant at The Essential Studio, a creative technology firm. In this capacity, I provided comprehensive software consultation and technical planning for 10+ client projects spanning diverse domains. I collaborated with cross-functional teams to deliver scalable product strategies, designed resilient software systems to meet complex client requirements, and streamlined remote development workflows improving team productivity by 30%. This consulting experience broadened my perspective on diverse technology stacks, client management, and architectural decision-making at scale.
     </p>
+
     <p class="animate-slide-up-delay">
-      Outside of professional development, I maintain a balanced lifestyle through sports and recreational activities, including football, competitive gaming, table tennis, and fitness training—pursuits that reinforce my commitment to discipline and continuous improvement.
+      <strong className="company-highlight">Beyond One — October 2025 to Present</strong><br/>
+      Currently, I serve as a Flutter Developer at Beyond One, where I contribute to Virgin Connect Roam, an innovative international eSIM roaming platform operating across multiple countries. In this role, I develop and optimize complex Flutter features for global users, enhance UI/UX flows to accommodate diverse user demographics and languages, and ensure seamless connectivity across international networks. This position has expanded my understanding of global application architecture, multi-region deployment strategies, and building user experiences that transcend geographical and cultural boundaries.
+    </p>
+
+    <p class="animate-slide-up-delay">
+      Throughout my career progression, I have consistently demonstrated the ability to adapt to diverse technical challenges, collaborate effectively within dynamic teams, and deliver production-grade solutions that drive business impact. My expertise spans Flutter for mobile development, React and Next.js for web development, state management, RESTful API integration, and scalable application architecture. I am committed to continuous learning, exploring emerging technologies, contributing to open-source projects, and maintaining the highest standards of code quality and user experience design.
+    </p>
+
+    <p class="animate-slide-up-delay">
+      Outside of professional development, I maintain a balanced lifestyle through sports and recreational activities, including football, competitive gaming, table tennis, and fitness training—pursuits that reinforce my commitment to discipline, resilience, and continuous improvement.
     </p>
 
     <div class="skills-section">
@@ -103,6 +119,49 @@ import Layout from "../layouts/Layout.astro";
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .career-title {
+    color: var(--color);
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .career-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 3px solid var(--primary);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0.8rem;
+    transition: all 0.3s ease;
+  }
+
+  .career-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(10px);
+  }
+
+  .career-section h4 {
+    color: var(--color);
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+  }
+
+  .career-section p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .career-section strong {
+    color: var(--color);
   }
 
   .skills-grid {

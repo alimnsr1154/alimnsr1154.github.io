@@ -26,30 +26,35 @@ import Course from "../components/Course.astro";
 
     <section class="courses">
       <Course
+        class="animate-on-scroll"
         name="Design Patterns"
         university="University of Alberta"
         link={"https://www.coursera.org/account/accomplishments/verify/YWWCSJG7D26G"}
         icon="/images/coursera.jpeg"
       />
       <Course
+        class="animate-on-scroll"
         name="Object Oriented Design"
         university="University of Alberta"
         link={"https://www.coursera.org/account/accomplishments/verify/ZSU8ELJDVTSK"}
         icon="/images/coursera.jpeg"
       />
       <Course
+        class="animate-on-scroll"
         name="JS Algorithms & Data Structures"
         university="Freecodecamp"
         link={"https://www.freecodecamp.org/certification/fcca89724bd-8a87-4e93-8a7c-29324c314330/javascript-algorithms-and-data-structures"}
         icon="/images/freecodecamp.jpeg"
       />
       <Course
+        class="animate-on-scroll"
         name="Mathematical Thinking in CS"
         university="University of California San Diego"
         link={"https://www.coursera.org/account/accomplishments/verify/BA72VFZZPYKB"}
         icon="/images/coursera.jpeg"
       />
       <Course
+        class="animate-on-scroll"
         name="Developing Cloud Native Applications"
         university="IBM"
         link={"https://www.coursera.org/account/accomplishments/verify/WXKPAS89C8UY"}
@@ -74,6 +79,12 @@ import Course from "../components/Course.astro";
     gap: 2rem;
     margin-top: 2rem;
   }
+
+  .courses .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+  .courses .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+  .courses .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+  .courses .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+  .courses .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
 
   @keyframes fadeUp {
     from {
