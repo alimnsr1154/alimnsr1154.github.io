@@ -25,9 +25,16 @@ const { icon, name, university, link } = Astro.props;
     border-radius: 0.8rem;
     color: var(--color);
     width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
   }
   .container:hover {
-    background-color: var(--light-bg);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.15);
   }
 
   .container > img {

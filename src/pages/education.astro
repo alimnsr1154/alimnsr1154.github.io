@@ -3,18 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Course from "../components/Course.astro";
 ---
 
-<Layout title="Education - Muhammad Wasif">
+<Layout title="Education - Ali Mansoor">
   <main>
-    <h2>
+    <h2 class="animate-on-scroll">
       I have never let my schooling interfare with my education - Mark Twain
     </h2>
-    <p>
+    <p class="animate-on-scroll">
       I started learning programming when I was in middle school. I am more of a
       self taught person who has learned from multiple platforms. I have studied
       advanced CS courses and subjects that help me in my career. I am always
       learning something new and advanced.
     </p>
-    <p>
+    <p class="animate-on-scroll">
       I have studied courses like <i>Object Oriented Design</i>, <i
         >Software Design Patterns</i
       > and <i>Data Structures & Algorithms</i> etc. Besides CS courses, I have also
@@ -72,5 +72,17 @@ import Course from "../components/Course.astro";
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>

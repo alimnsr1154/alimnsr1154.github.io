@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 
 <Layout title="Projects - Ali Mansoor">
   <main>
-    <div class="hero-section">
+    <div class="hero-section animate-fade-in">
       <h1>My Projects</h1>
       <p class="hero-description">
         Welcome to my project showcase — a curated collection of practical solutions that blend 
@@ -17,7 +17,7 @@ import ProjectCard from "../components/ProjectCard.astro";
       </p>
     </div>
     <!-- Mobile Applications Section -->
-    <section class="project-section">
+    <section class="project-section animate-slide-up">
       <div class="section-header">
         <div class="section-icon">📱</div>
         <div>
@@ -329,6 +329,30 @@ import ProjectCard from "../components/ProjectCard.astro";
 
     .coming-soon-content h3 {
       font-size: 1.3rem;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 1s ease-out 0.3s both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 

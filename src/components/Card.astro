@@ -42,9 +42,16 @@ const { title, subtitle, description, links, image } = Astro.props;
     max-width: 600px;
     margin-bottom: 1rem;
     color: var(--color);
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
   }
   .container:hover {
-    background-color: var(--light-bg);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.15);
   }
 
   .header {

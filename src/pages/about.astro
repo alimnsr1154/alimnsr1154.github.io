@@ -4,35 +4,154 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="About Me - Ali Mansoor">
   <main>
-    <p>
+    <h2 class="animate-fade-in">About Me</h2>
+    <p class="animate-slide-up">
       My journey in programming began during my early university days. As I explored various programming languages and technologies, I naturally gravitated toward mobile development — especially with Flutter — due to its power to build beautiful cross-platform apps.
     </p>
-    <p>
+    <p class="animate-slide-up-delay">
       Over the past 2+ years, I've worked on a variety of real-world projects, building everything from digital payment apps to educational platforms and e-commerce solutions. My experience includes working with companies like <strong>Paymo</strong>, <strong>The Essential Studio</strong>, and <strong>GRADE UP</strong>, where I contributed as a Junior and Senior Flutter Developer.
     </p>
-    <p>
+    <p class="animate-slide-up-delay">
       I'm passionate about building high-quality apps with seamless user experiences. My expertise lies in Flutter, Firebase, REST APIs, and scalable app architecture. I'm also comfortable working with backend stacks like Node.js and Flask, and I enjoy crafting end-to-end solutions.
     </p>
-    <p>
+    <p class="animate-slide-up-delay">
       In addition to my professional work, I actively explore new frameworks and tools, and I enjoy refining my skills by contributing to meaningful projects. I value clean code, good design, and collaborative teamwork.
     </p>
-    <p>
+    <p class="animate-slide-up-delay">
       Outside of coding, I enjoy football, video games, table tennis, and a good session at the gym.
     </p>
+
+    <div class="skills-section">
+      <h3 class="animate-fade-in">Technical Skills</h3>
+      <div class="skills-grid animate-on-scroll">
+        <span class="skill-pill" style="--skill-color: #007AFF;">Flutter</span>
+        <span class="skill-pill" style="--skill-color: #FFA500;">Firebase</span>
+        <span class="skill-pill" style="--skill-color: #68A063;">Node.js</span>
+        <span class="skill-pill" style="--skill-color: #61DAFB;">React</span>
+        <span class="skill-pill" style="--skill-color: #4B8BBE;">Python/Flask</span>
+        <span class="skill-pill" style="--skill-color: #3178C6;">TypeScript</span>
+        <span class="skill-pill" style="--skill-color: #F1DB4D;">JavaScript</span>
+        <span class="skill-pill" style="--skill-color: #F16529;">REST APIs</span>
+        <span class="skill-pill" style="--skill-color: #13C3E7;">PostgreSQL</span>
+        <span class="skill-pill" style="--skill-color: #47A248;">Git</span>
+        <span class="skill-pill" style="--skill-color: #092E20;">Django</span>
+        <span class="skill-pill" style="--skill-color: #000000;">Docker</span>
+      </div>
+    </div>
   </main>
 </Layout>
 
 <style>
+  h2 {
+    color: var(--color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
   p {
     max-width: 90ch;
     color: var(--color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
   }
   p a {
     color: var(--primary);
   }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 1s ease-out 0.2s both;
+  }
+
+  .animate-slide-up-delay {
+    animation: slideUp 1s ease-out 0.4s both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .skills-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .skills-section h3 {
+    color: var(--color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .skills-grid.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .skill-pill {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: rgba(var(--primary-rgb, 52, 81, 178), 0.1);
+    border: 1px solid var(--skill-color, var(--primary));
+    color: var(--skill-color, var(--primary));
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .skill-pill:hover {
+    background: var(--skill-color, var(--primary));
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(var(--skill-color, 52, 81, 178, 0.3));
+  }
+
   @media (max-width: 450px) {
     p {
       font-size: small;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .skills-section h3 {
+      font-size: 1.4rem;
+    }
+    .skill-pill {
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
     }
   }
 </style>

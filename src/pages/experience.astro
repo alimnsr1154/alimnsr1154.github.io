@@ -5,40 +5,84 @@ import Experience from "../components/ExperienceCard.astro";
 
 <Layout title="Experience - Ali Mansoor">
   <main>
-    <h2>Employment History</h2>
-    <h2>I have gained hands-on experience by working across diverse projects and platforms</h2>
-    <p style="max-width: 80ch;">
+    <h2 class="animate-fade-in">Employment History</h2>
+    <h2 class="animate-slide-up">I have gained hands-on experience by working across diverse projects and platforms</h2>
+    <p class="animate-slide-up-delay" style="max-width: 80ch;">
       I thrive in collaborative, fast-paced environments where I can contribute to building scalable and user-focused applications. I value adaptability, teamwork, and clean architecture — qualities that enable me to deliver impactful mobile and backend solutions.
     </p>
 
-    <Experience
-      title="Flutter Developer at Paymo, Lahore"
-      description="Contributed across internship, part-time, and full-time roles. Delivered core features such as QR scanning and real-time payment tracking, reducing transaction processing time by 35%. Implemented responsive UI components and scalable architecture, boosting app usability scores by 40%. Collaborated with backend teams to ensure seamless integration and optimized performance across Android and iOS platforms."
-      subtitle="July 2024 – Present"
-      image="/images/paymo_logo.jpeg"
-    />
+    <div class="experience-container">
+      <Experience
+        title="Flutter Developer at Paymo, Lahore"
+        description="Contributed across internship, part-time, and full-time roles. Delivered core features such as QR scanning and real-time payment tracking, reducing transaction processing time by 35%. Implemented responsive UI components and scalable architecture, boosting app usability scores by 40%. Collaborated with backend teams to ensure seamless integration and optimized performance across Android and iOS platforms."
+        subtitle="July 2024 – Present"
+        image="/images/paymo_logo.jpeg"
+      />
 
-    <Experience
-      title="Development Consultant at The Essential Studio, Islamabad (Remote)"
-      description="Provided software consultation, technical planning, and solution implementation for 10+ client projects. Collaborated with cross-functional teams to deliver scalable product strategies and resilient software systems. Streamlined remote workflows, improving team productivity by 30%."
-      subtitle="June 2024 – May 2025"
-      image="/images/essential_studio.jpeg"
-    />
+      <Experience
+        title="Development Consultant at The Essential Studio, Islamabad (Remote)"
+        description="Provided software consultation, technical planning, and solution implementation for 10+ client projects. Collaborated with cross-functional teams to deliver scalable product strategies and resilient software systems. Streamlined remote workflows, improving team productivity by 30%."
+        subtitle="June 2024 – May 2025"
+        image="/images/essential_studio.jpeg"
+      />
 
-    <Experience
-      title="Junior Flutter Developer at GRADE UP (Pvt.) Ltd, Islamabad"
-      description="Enhanced mobile app functionality through feature development and performance optimization. Collaborated within a team to improve app versions, user experience, and code quality. Strengthened core skills in Flutter and mobile development."
-      subtitle="August 2023 – August 2024"  
-    />
+      <Experience
+        title="Junior Flutter Developer at GRADE UP (Pvt.) Ltd, Islamabad"
+        description="Enhanced mobile app functionality through feature development and performance optimization. Collaborated within a team to improve app versions, user experience, and code quality. Strengthened core skills in Flutter and mobile development."
+        subtitle="August 2023 – August 2024"  
+      />
+    </div>
   </main>
 </Layout>
 
 <style>
   h2 {
     color: var(--color);
+    margin-bottom: 1rem;
+  }
+  h2:first-child {
+    font-size: 2.5rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   p {
     margin-bottom: 2rem;
     color: var(--color);
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 1s ease-out 0.2s both;
+  }
+
+  .animate-slide-up-delay {
+    animation: slideUp 1s ease-out 0.4s both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
