@@ -5,60 +5,28 @@ import Course from "../components/Course.astro";
 
 <Layout title="Education - Ali Mansoor">
   <main>
-    <h2 class="animate-on-scroll">
-      I have never let my schooling interfare with my education - Mark Twain
-    </h2>
+    <h2 class="animate-on-scroll">Education & Learning</h2>
     <p class="animate-on-scroll">
-      I started learning programming when I was in middle school. I am more of a
-      self taught person who has learned from multiple platforms. I have studied
-      advanced CS courses and subjects that help me in my career. I am always
-      learning something new and advanced.
+      I completed my formal education in Computer Science through quality institutions in Pakistan. My academic foundation began with intermediate studies in computer science, followed by a comprehensive bachelor's degree program where I developed expertise in software engineering, data structures, algorithms, and modern application development.
     </p>
     <p class="animate-on-scroll">
-      I have studied courses like <i>Object Oriented Design</i>, <i
-        >Software Design Patterns</i
-      > and <i>Data Structures & Algorithms</i> etc. Besides CS courses, I have also
-      studied <i>Calculus</i> & <i>Discrete Mathematics</i>. <br />
-      Though I am enrolled in BS Computer Science ADP Program in Virtual University
-      of Pakistan, but most of my educational credit goes to platforms like Coursera,
-      EdX and FreeCodeCamp.
+      My coursework covered fundamental computer science concepts including <i>Object-Oriented Programming</i>, <i>Data Structures & Algorithms</i>, <i>Database Management Systems</i>, <i>Software Engineering</i>, <i>Web Development</i>, and <i>Mobile Application Development</i>. I have a strong foundation in mathematics including <i>Calculus</i>, <i>Discrete Mathematics</i>, and <i>Linear Algebra</i>. Beyond formal education, I continuously engage in professional development through online courses and real-world project experience to stay current with emerging technologies and industry best practices.
     </p>
 
     <section class="courses">
       <Course
         class="animate-on-scroll"
-        name="Design Patterns"
-        university="University of Alberta"
-        link={"https://www.coursera.org/account/accomplishments/verify/YWWCSJG7D26G"}
-        icon="/images/coursera.jpeg"
+        name="Bachelor of Science in Computer Science"
+        university="National University of Computer and Emerging Sciences (NUCES)"
+        link={"#"}
+        icon="/images/ic_launcher.png"
       />
       <Course
         class="animate-on-scroll"
-        name="Object Oriented Design"
-        university="University of Alberta"
-        link={"https://www.coursera.org/account/accomplishments/verify/ZSU8ELJDVTSK"}
-        icon="/images/coursera.jpeg"
-      />
-      <Course
-        class="animate-on-scroll"
-        name="JS Algorithms & Data Structures"
-        university="Freecodecamp"
-        link={"https://www.freecodecamp.org/certification/fcca89724bd-8a87-4e93-8a7c-29324c314330/javascript-algorithms-and-data-structures"}
-        icon="/images/freecodecamp.jpeg"
-      />
-      <Course
-        class="animate-on-scroll"
-        name="Mathematical Thinking in CS"
-        university="University of California San Diego"
-        link={"https://www.coursera.org/account/accomplishments/verify/BA72VFZZPYKB"}
-        icon="/images/coursera.jpeg"
-      />
-      <Course
-        class="animate-on-scroll"
-        name="Developing Cloud Native Applications"
-        university="IBM"
-        link={"https://www.coursera.org/account/accomplishments/verify/WXKPAS89C8UY"}
-        icon="/images/coursera.jpeg"
+        name="Intermediate in Computer Science"
+        university="Punjab Group of Colleges"
+        link={"#"}
+        icon="/images/ic_launcher.png"
       />
     </section>
   </main>
@@ -75,16 +43,14 @@ import Course from "../components/Course.astro";
 
   .courses {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    max-width: 900px;
   }
 
   .courses .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
   .courses .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
-  .courses .animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
-  .courses .animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
-  .courses .animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
 
   @keyframes fadeUp {
     from {
