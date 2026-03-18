@@ -108,6 +108,18 @@ import ProjectCard from "../components/ProjectCard.astro";
 
    <!-- Other code remains unchanged above -->
 <div class="projects-grid">
+<ProjectCard class="animate-on-scroll"
+    title="Paymo Events - Ticket Booking Platform"
+    description="A streamlined web-based event ticketing solution built with Next.js and Tailwind CSS. Enables users to browse, book, and manage event tickets with a smooth, responsive experience across all devices."
+    technologies={["Next.js", "Tailwind CSS", "HTML", "JSS", "Responsive Design"]}
+    category="Events / Ticketing"
+    links={[
+      { text: "Visit Website", href: "https://events.paymo.com.pk/", type: "website" },
+    ]}
+    image="/images/projects/event_paymo.png"
+    featured={true}
+  />
+
   <ProjectCard class="animate-on-scroll"
     title="Faisal Ali Khan - Creative Portfolio"
     description="A sophisticated portfolio website showcasing the work of Faisal Ali Khan, CEO of The Essential Studio. Features comprehensive galleries for VFX, animation, branding, and multimedia production services with modern responsive design."
@@ -117,20 +129,8 @@ import ProjectCard from "../components/ProjectCard.astro";
       { text: "Visit Website", href: "https://faisalalikhan.vercel.app/", type: "website" },
     ]}
     image="/images/projects/faisal_ali_khan.png"
-    featured={true}
   />
-
-  <!-- ✅ New Web Project: Paymo Events -->
-  <ProjectCard class="animate-on-scroll"
-    title="Paymo Events - Ticket Booking Platform"
-    description="A streamlined web-based event ticketing solution built with Next.js and Tailwind CSS. Enables users to browse, book, and manage event tickets with a smooth, responsive experience across all devices."
-    technologies={["Next.js", "Tailwind CSS", "HTML", "JSS", "Responsive Design"]}
-    category="Events / Ticketing"
-    links={[
-      { text: "Visit Website", href: "https://events.paymo.com.pk/", type: "website" },
-    ]}
-    image="/images/projects/event_paymo.png"
-  />
+  
     <ProjectCard class="animate-on-scroll"
     title="Unicorn International - Tools & Knives Store"
     description="A robust eCommerce platform for Unicorn International, offering a wide range of tools, knives, and jewellery products. Features include detailed product categories such as Damascus Knives, D2 Steel Knives, Rail Rod Spike Knives, Medieval Swords, Jewellery Tools & Wires, and Optical Tools. Built for performance and ease of use."
