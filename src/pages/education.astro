@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Course from "../components/Course.astro";
+import Experience from "../components/ExperienceCard.astro";
 ---
 
 <Layout title="Education - Ali Mansoor">
@@ -13,22 +13,22 @@ import Course from "../components/Course.astro";
       My coursework covered fundamental computer science concepts including <i>Object-Oriented Programming</i>, <i>Data Structures & Algorithms</i>, <i>Database Management Systems</i>, <i>Software Engineering</i>, <i>Web Development</i>, and <i>Mobile Application Development</i>. I have a strong foundation in mathematics including <i>Calculus</i>, <i>Discrete Mathematics</i>, and <i>Linear Algebra</i>. Beyond formal education, I continuously engage in professional development through online courses and real-world project experience to stay current with emerging technologies and industry best practices.
     </p>
 
-    <section class="courses">
-      <Course
+    <div class="education-container">
+      <Experience
         class="animate-on-scroll"
-        name="Bachelor of Science in Computer Science"
-        university="National University of Computer and Emerging Sciences (NUCES)"
-        link={"#"}
-        icon="/images/ic_launcher.png"
+        title="Bachelor of Science in Computer Science"
+        subtitle="2021 - 2025"
+        description="Comprehensive bachelor's degree program in Computer Science covering software engineering, data structures, algorithms, database management systems, web development, mobile application development, and advanced computer science concepts. Strong foundation in mathematics and practical programming skills."
+        image="/images/education/fast_logo.jpg"
       />
-      <Course
+      <Experience
         class="animate-on-scroll"
-        name="Intermediate in Computer Science"
-        university="Punjab Group of Colleges"
-        link={"#"}
-        icon="/images/ic_launcher.png"
+        title="Intermediate in Computer Science"
+        subtitle="2019 - 2021"
+        description="Intermediate education foundation in Computer Science with coursework in programming fundamentals, computer organization, discrete mathematics, and information technology. Developed core problem-solving skills and theoretical knowledge in computer science principles."
+        image="/images/education/pgc_logo.png"
       />
-    </section>
+    </div>
   </main>
 </Layout>
 
@@ -41,16 +41,16 @@ import Course from "../components/Course.astro";
     color: var(--color);
   }
 
-  .courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  .education-container {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     margin-top: 3rem;
-    max-width: 900px;
+    width: 100%;
   }
 
-  .courses .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
-  .courses .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+  .education-container .animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+  .education-container .animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
 
   @keyframes fadeUp {
     from {
